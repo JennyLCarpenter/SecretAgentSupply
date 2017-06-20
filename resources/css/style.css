@@ -54,7 +54,8 @@ body {font-family: Helvetica;
 h2 {}
 h1 {font-size: 2rem;
     padding-top: .25rem;}
-p{}
+p .responsive {display: none;
+}
 .container {width: 960px;
 		          margin: 0 auto;}
 
@@ -120,6 +121,7 @@ footer {padding-left: 40px;
 			  color: white;
 			  padding-top: 60px;}
 
+/*Tablet*/
 @media only screen and (max-width: 1024px;) {.mainbanner {
 	          margin-top: 10rem;
 	          font-weight: bold;
@@ -128,5 +130,32 @@ footer {padding-left: 40px;
 						color: white;
 						width: 100%;
 						padding: 2rem 3rem;
- } .navigation
+ }
+ .navigation p {display: none;
+ }
+ .productgrid {overflow: hidden;
+ }
+.productgrid img {width: 50%;
 }
+.location,
+.hours {
+			width: 35%;
+}
+
+/*Mobile*/
+@media only screen and (max-width: 470px;){
+	.mainbanner {
+		          margin-top: 10rem;
+							width: 100%;
+							padding: 1rem 2rem;
+}
+.productgrid img {width: 90%;
+}
+.location,
+.hours {display: flex;
+	    flex-direction: column;
+			justify-content: space-around;
+			width: 90%;
+}
+footer {width: 100%;
+				margin: 0 auto;}
